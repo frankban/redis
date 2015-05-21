@@ -1,0 +1,27 @@
+options:
+  port:
+    type: int
+    default: 6379
+    description: |
+      Accept connections on the specified port.
+  password:
+    type: string
+    default: ""
+    description: |
+      Require clients to issue AUTH <PASSWORD> before processing any other
+      commands.
+  loglevel:
+    type: string
+    default: notice
+    description: |
+      Specify the Redis server verbosity level. Choices are:
+      - debug (a lot of information, useful for development/testing);
+      - verbose (many rarely useful info, but not a mess like the debug level);
+      - notice (moderately verbose, what you want in production probably);
+      - warning (only very important / critical messages are logged).
+  logfile:
+    type: string
+    default: /var/log/redis/redis-server.log
+    description: |
+      Spcify the log file name.
+
